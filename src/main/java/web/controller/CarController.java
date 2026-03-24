@@ -4,14 +4,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import web.model.Car;
+import web.service.CarService;
+import web.service.CarServiceImpl;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Controller
 public class CarController {
+    CarService carService = new CarServiceImpl();
 
-    @GetMapping(value = "/cars")
+    @GetMapping(value = "/cars", produces = "text/html;charset=UTF-8")
     public String showCars(Model model) {
         List<Car> cars = new ArrayList<>();
         cars.add(new Car("model1", 50, 6));

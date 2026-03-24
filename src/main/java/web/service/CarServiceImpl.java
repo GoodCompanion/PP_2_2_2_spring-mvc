@@ -9,7 +9,8 @@ import java.util.List;
 public class CarServiceImpl implements CarService{
 
     @Override
-    public Car getCars(List<Car> cars) {
+    public Car getCars(List<Car> cars, int count) {
+
         return null;
     }
 }

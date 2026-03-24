@@ -3,15 +3,15 @@ package web.model;
 public class Car {
     private String model;
     private int maxSpeed;
-    private int dorCount;
+    private int doorCount;
 
     public Car() {
     }
 
-    public Car(String model, int maxSpeed, int dorCount) {
+    public Car(String model, int maxSpeed, int doorCount) {
         this.model = model;
         this.maxSpeed = maxSpeed;
-        this.dorCount = dorCount;
+        this.doorCount = doorCount;
     }
 
     public String getModel() {
@@ -30,12 +30,12 @@ public class Car {
         this.maxSpeed = maxSpeed;
     }
 
-    public int getDorCount() {
-        return dorCount;
+    public int getDoorCount() {
+        return doorCount;
     }
 
-    public void setDorCount(int dorCount) {
-        this.dorCount = dorCount;
+    public void setDoorCount(int doorCount) {
+        this.doorCount = doorCount;
     }
 
     @Override
@@ -43,7 +43,7 @@ public class Car {
         return "Car{" +
                 "model='" + model + '\'' +
                 ", maxSpeed=" + maxSpeed +
-                ", dorCount=" + dorCount +
+                ", dorCount=" + doorCount +
                 '}';
     }
 }
