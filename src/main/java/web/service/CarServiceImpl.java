@@ -27,10 +27,12 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public List<Car> getCars(int count) {
-        List<Car> list = new ArrayList<>();
-        for (int i = 0; i < count; i++) {
-            list.add(cars.get(i));
+        if (count <= 0) {
+            return new ArrayList<>();
         }
-        return list;
+        if (count >= cars.size()) {
+            return new ArrayList<>(cars);
+        }
+        return new ArrayList<>(cars.subList(0, count));
     }
 }
