@@ -53,11 +53,6 @@
                 <configuration>
                     <warSourceDirectory>src/webapp</warSourceDirectory>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
-                    <webResources>
-                        <resource>
-                            <directory>src/webapp</directory>
-                        </resource>
-                    </webResources>
                 </configuration>
             </plugin>
         </plugins>
