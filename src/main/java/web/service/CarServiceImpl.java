@@ -21,7 +21,7 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public List<Car> getAllCars() {
-        return cars;
+        return new ArrayList<>(cars);
     }
 
     @Override
