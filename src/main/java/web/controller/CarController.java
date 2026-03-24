@@ -21,15 +21,12 @@ public class CarController {
 
     @GetMapping(value = "/cars", produces = "text/html;charset=UTF-8")
     public String showCars(@RequestParam(value = "count", required = false) Integer count, Model model) {
-        List<Car> allCars = carService.getAllCars();
         List<Car> cars;
 
-        if (count == null || count >= allCars.size()) {
-            cars = allCars;
-        } else if (count <= 0) {
-            cars = new ArrayList<>();
+        if (count != null && count > 0) {
+            cars = carService.getCars(count);  // ← сервис сам решит, сколько вернуть
         } else {
-            cars = allCars.subList(0, count);
+            cars = carService.getAllCars();    // ← все машины
         }
         model.addAttribute("cars", cars);
         return "cars";
