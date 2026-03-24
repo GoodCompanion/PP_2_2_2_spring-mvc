@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Список машин</title>
+</head>
+<body>
+
+<h1>Список машин</h1>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>Модель</th>
+        <th>Макс. скорость (км/ч)</th>
+        <th>Кол-во дверей</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="car : ${cars}">
+        <td th:text="${car.model}">Model</td>
+        <td th:text="${car.maxSpeed}">0</td>
+        <td th:text="${car.doorCount}">0</td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
