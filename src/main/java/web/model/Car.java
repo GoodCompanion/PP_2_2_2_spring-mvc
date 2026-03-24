@@ -43,7 +43,7 @@ public class Car {
         return "Car{" +
                 "model='" + model + '\'' +
                 ", maxSpeed=" + maxSpeed +
-                ", dorCount=" + doorCount +
+                ", doorCount=" + doorCount +
                 '}';
     }
 }
